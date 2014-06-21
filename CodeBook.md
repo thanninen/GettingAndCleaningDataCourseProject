@@ -14,11 +14,9 @@ is labeled in the actual script run_analysis.R.
 -------------------
 Step01 - Merge the training and test sets to create one data set.
 
-  a. Assigned variables and read files.
-  
-        Generic variables were assigned to the following 8 files and subsequently,
-        those files were read using read.csv().  The argument sep="" must be used
-        in the read.csv() function:
+  a. Assigned variables and read files. Generic variables were assigned
+  to the following 8 files and subsequently,those files were read using
+  read.csv().  The argument sep="" must be used in the read.csv() function:
         
           subject_test.txt
           
