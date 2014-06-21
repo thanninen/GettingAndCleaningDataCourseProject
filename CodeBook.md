@@ -12,17 +12,31 @@ those steps is detailed below and the starting point of each step
 is labeled in the actual script run_analysis.R.
 
 -------------------
-Step01 - Merge the training and test sets to create one data set
+Step01 - Merge the training and test sets to create one data set.
 
-  a. Assign variables and read files
+  a. Assigned variables and read files.
+  
         Generic variables were assigned to the following 8 files and subsequently,
         those files were read using read.csv().  The argument sep="" must be used
         in the read.csv() function:
         
-          subject_test.txt, x_test.txt, y_text.txt, subject_train.txt, 
-          x_train.txt, y_train.txt, activity_labels.txt, features.txt
+          subject_test.txt
           
-        Data in the 'Inertial Data' folders was not considered relevant.
+          x_test.txt
+          
+          y_text.txt
+          
+          subject_train.txt
+          
+          x_train.txt
+          
+          y_train.txt
+          
+          activity_labels.txt
+          
+          features.txt
+          
+      Data in the 'Inertial Data' folders was not considered relevant.
         
   b. A visual audit of the features in the features.txt file showed inconsistencies
   in some of the names when compared to the features_info.txt file.  Some of the 
@@ -30,17 +44,17 @@ Step01 - Merge the training and test sets to create one data set
   to correct this.
   
   c. Column names were added to x_trainTXT and x_textTXT from features.txt using
-  names() function
+  names() function.
   
   d. The three 'test' files were joined with cbind() into a single data frame 'testTXT'
   and the three 'train' files were joined with cbind() into a single data frame 'trainTXT'.
-  cbind() was used so that all of the independent columns remained after the merge
+  cbind() was used so that all of the independent columns remained after the merge.
         
   e. testTXT and trainTXT were then merged together using rbind() because they both
   contained identical columns.  The combined file was entitled 'DataSet01'.
 
 -------------------
-Step02 - Extract only the measurements on the mean and standard deviation for each measurement
+Step02 - Extracted only the measurements on the mean and standard deviation for each measurement.
 
   a. Aside from the "subject" and "activity" columns, the only other columns extracted
   were those with measurements on the mean or standard deviation for each measurement.
@@ -48,7 +62,7 @@ Step02 - Extract only the measurements on the mean and standard deviation for ea
   name were extracted.  This resulted in 68 total columns.
   
 -------------------
-Step03 - Use descriptive activity names to name the activities in the data set
+Step03 - Used descriptive activity names to name the activities in the data set.
 
   a. The activity_labels.txt file contains descriptive activity names for use in this
   step.  A column called 'activity_Desc' was added to the data frame that

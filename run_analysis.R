@@ -55,6 +55,7 @@ DataSet01$activity<-NULL
 ##Step05
 
 library(reshape2)
+
 DataSet02<-melt(DataSet01, id.vars=c("activity_desc","subject"))
 
 DataSet02<-dcast(DataSet02,activity_desc + subject ~ variable,mean)
