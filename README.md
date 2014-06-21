@@ -27,6 +27,10 @@ unzipped folder should be: "[working directory]/UCI HAR Dataset"
 For more details regarding the process, variables, naming conventions, and for further
 clarification of what the script does, please read CodeBook.md.
 
+For the Coursera class project assignment, the final tidy data set (DataSet02)
+was uploaded using write.table() with the argument sep=",".  This file can easily be
+read back into R using the default arguments of read.csv().
+
 More info about the original dataset can be found here:
 "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones"
 
