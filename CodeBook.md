@@ -69,7 +69,7 @@ Step03 - Used descriptive activity names to name the activities in the data set.
   original 'activity' column, with integers only, was then removed.
   
 -------------------
-Step04 - Appropriately label the data set with descriptive variable names.
+Step04 - Appropriately labeled the data set with descriptive variable names.
 
   a. Column names were changed into more understandable and structurally correct names.
   Each column name contained up to seven components.  Those components were:
@@ -118,7 +118,7 @@ Step04 - Appropriately label the data set with descriptive variable names.
   understandable, and reproducable.
 
 -------------------
-Step05 - Create a second independent tidy data set with the average of each
+Step05 - Created a second independent tidy data set with the average of each
 variable for each activity and each subject. 
 
   a. The Package (reshape2) was used for this step.  The melt() function, based on
