@@ -1,6 +1,4 @@
--------------------
-run_analysis.R
-Version 1.0
+run_analysis.R, Version 1.0
 -------------------
 Troy Hanninen
 -------------------

@@ -1,4 +1,5 @@
 ##Step01
+
 subject_test<-"./UCI HAR Dataset/test/subject_test.txt"
 x_test<-"./UCI HAR Dataset/test/X_test.txt"
 y_test<-"./UCI HAR Dataset/test/y_test.txt"
@@ -27,13 +28,16 @@ trainTXT<-cbind(subject_trainTXT,x_trainTXT,y_trainTXT)
 DataSet01<-rbind(testTXT,trainTXT)
 
 ##Step02
+
 DataSet01<-DataSet01[,grep("-mean\\(\\)|-std\\(\\)|subject|activity",names(DataSet01))]
 
 ##Step03
+
 DataSet01$activity_desc<-activity_labelsTXT$V2[DataSet01$activity]
 DataSet01$activity<-NULL
 
 ##Step04
+
     names(DataSet01)<-gsub("^t","time_",names(DataSet01))
     names(DataSet01)<-gsub("^f","freq_",names(DataSet01))
     names(DataSet01)<-gsub("Body","body_",names(DataSet01))
@@ -49,6 +53,7 @@ DataSet01$activity<-NULL
     names(DataSet01)<-gsub("-Z","_z",names(DataSet01))
 
 ##Step05
+
 library(reshape2)
 DataSet02<-melt(DataSet01, id.vars=c("activity_desc","subject"))
 
